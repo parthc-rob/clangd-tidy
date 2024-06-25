@@ -1,0 +1,6 @@
+- id: clangd-tidy
+  name: clangd-tidy
+  description: Format C/C++/C# code with faster version of clang-tidy
+  entry: clangd-tidy --color auto
+  files: '^(.*/)'
+  language: script
