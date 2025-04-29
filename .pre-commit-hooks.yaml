@@ -1,7 +1,7 @@
 - id: clangd-tidy
   name: clangd-tidy
   description: Format C/C++/C# code with erenon/bazel_clang_tidy.git
-  entry: bazel build //... --aspects @bazel_clang_tidy//clang_tidy:clang_tidy.bzl%clang_tidy_aspect --output_groups=report --@bazel_clang_tidy//:clang_tidy_config=//:clang_tidy_config --
+  entry: bazel build //... --compile_one_dependency --aspects @bazel_clang_tidy//clang_tidy:clang_tidy.bzl%clang_tidy_aspect --output_groups=report --@bazel_clang_tidy//:clang_tidy_config=//:clang_tidy_config --
   files: '^(.*/)'
   exclude: |
     (?x)(
